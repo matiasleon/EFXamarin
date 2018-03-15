@@ -2,11 +2,13 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
+using EntityFrameworkTest.DataAccess;
+using EntityFrameworkTest.Helpers;
 using Xamarin.Forms;
 
 using EntityFrameworkTest.Models;
 using EntityFrameworkTest.Views;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace EntityFrameworkTest.ViewModels
 {
@@ -15,8 +17,11 @@ namespace EntityFrameworkTest.ViewModels
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
+        private readonly ItemsRepository repository;
+
         public ItemsViewModel()
         {
+            repository = new ItemsRepository();
             Title = "Browse";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
@@ -39,7 +44,7 @@ namespace EntityFrameworkTest.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                var items = await repository.GetAll();
                 foreach (var item in items)
                 {
                     Items.Add(item);

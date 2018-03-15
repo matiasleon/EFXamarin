@@ -45,7 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">
+      <Version>2.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="25.4.0.2" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="25.4.0.2" />
@@ -53,6 +56,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="25.4.0.2" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementations\DbPathAndroid.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,7 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityFrameworkTest\EntityFrameworkTest.csproj">
-      <Project>{56EDA1AB-6FE0-4C8A-A429-4C119E4707B5}</Project>
+      <Project>{be120943-c74e-4925-b510-7a6bf35a9a98}</Project>
       <Name>EntityFrameworkTest</Name>
     </ProjectReference>
   </ItemGroup>

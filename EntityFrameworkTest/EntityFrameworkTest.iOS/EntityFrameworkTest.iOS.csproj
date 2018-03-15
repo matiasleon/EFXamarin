@@ -88,6 +88,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Implementations\DBPathIOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -119,6 +120,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">
+      <Version>2.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
   </ItemGroup>
   <ItemGroup>
@@ -150,7 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityFrameworkTest\EntityFrameworkTest.csproj">
-      <Project>{56EDA1AB-6FE0-4C8A-A429-4C119E4707B5}</Project>
+      <Project>{be120943-c74e-4925-b510-7a6bf35a9a98}</Project>
       <Name>EntityFrameworkTest</Name>
     </ProjectReference>
   </ItemGroup>
