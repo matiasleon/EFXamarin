@@ -6,15 +6,15 @@ using Xamarin.Forms;
 
 namespace EntityFrameworkTest.DataAccess
 {
-    public class Database : DbContext
+    public class IntegrationDatabase : DbContext
     {
         public DbSet<Item> Items { get; set; }
 
         public DbSet<SubItem> SubItems { get; set; }
 
-        public Database()
+        public IntegrationDatabase()
         {
-            this.Database.EnsureCreated();
+            this.Database.MigrateAsync();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

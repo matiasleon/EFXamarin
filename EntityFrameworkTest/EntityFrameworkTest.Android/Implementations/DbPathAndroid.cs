@@ -10,7 +10,8 @@ namespace EntityFrameworkTest.Droid.Implementations
     {
         public string GetPath()
         {
-            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "EFCore.db");
+            var a =  Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "EFCore.db");
+            return a;
         }
     }
 }

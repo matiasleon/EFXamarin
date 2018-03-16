@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using EntityFrameworkTest.Models;
 using Microsoft.EntityFrameworkCore;
@@ -8,10 +7,10 @@ namespace EntityFrameworkTest.DataAccess
 {
     public class ItemsRepository
     {
-        private readonly Database databaseContext;
+        private readonly IntegrationDatabase databaseContext;
         public ItemsRepository()
         {
-            this.databaseContext = new Database();
+            this.databaseContext = new IntegrationDatabase();
         }
 
         public async Task<IList<Item>> GetAll()

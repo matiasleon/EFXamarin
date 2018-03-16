@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkTest.Android
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkTest.iOS", "EntityFrameworkTest\EntityFrameworkTest.iOS\EntityFrameworkTest.iOS.csproj", "{B509906E-7F48-44BB-98A1-E28BA3D805C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkTest", "EntityFrameworkTest\EntityFrameworkTest\EntityFrameworkTest.csproj", "{BE120943-C74E-4925-B510-7A6BF35A9A98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkTest", "EntityFrameworkTest\EntityFrameworkTest\EntityFrameworkTest.csproj", "{BE120943-C74E-4925-B510-7A6BF35A9A98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
