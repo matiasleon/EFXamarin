@@ -13,6 +13,8 @@ namespace EntityFrameworkTest.Views
     {
         public Item Item { get; set; }
 
+        public IList<SubItem> Subitems { get; set; }
+
         private readonly ItemsRepository repository;
         public NewItemPage()
         {
@@ -23,7 +25,12 @@ namespace EntityFrameworkTest.Views
                 Text = "Item name",
                 Description = "This is an item description."
             };
+            var subitem = new SubItem(){Description = "mediocampista", Name = "Enzo Perez"};
+            var subitem2 = new SubItem() { Description = "mediocampista", Name = "Leo Ponzio" };
+            Subitems.Add(subitem);
+            Subitems.Add(subitem2);
             repository = new ItemsRepository();
+            
             BindingContext = this;
         }
 
