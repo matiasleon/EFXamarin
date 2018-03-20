@@ -1,7 +1,14 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using EntityFrameworkTest.Helpers;
 using EntityFrameworkTest.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Xamarin.Forms;
 
 namespace EntityFrameworkTest.DataAccess
@@ -14,6 +21,7 @@ namespace EntityFrameworkTest.DataAccess
 
         public IntegrationDatabase()
         {
+            this.Database.EnsureCreated();
             this.Database.MigrateAsync();
         }
 
